@@ -15,3 +15,10 @@ mainDocumentation = Documentation.create(success=MainOutputSchema)
 )
 async def start():
     return MainOutput.create(MainService.start())
+
+
+items = [{"item_id": i} for i in range(1000)]
+
+@main.get("/items")
+async def get_items():
+    return {"items": items}
