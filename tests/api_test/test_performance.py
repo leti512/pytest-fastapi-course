@@ -9,6 +9,10 @@ def test_read_item(benchmark):
     def get_item():
         response = client.get("/main/items")
         assert response.status_code == 200
+        
+        
+        
+        
 # def test_read_itemv2():
 #     #starting time
 #     start = time.time()
